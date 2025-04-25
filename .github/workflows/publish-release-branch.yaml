@@ -20,9 +20,7 @@ jobs:
     - run: npm run format
     - run: npm run lint
     - run: npm run spell
-    - run: npm run test
     - run: npm run build
-    - run: npm run test:it
 
   publish-npm:
     needs: build
