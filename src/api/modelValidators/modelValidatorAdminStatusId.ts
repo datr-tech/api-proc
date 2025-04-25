@@ -1,4 +1,4 @@
-import { adminService } from '@freight/common-api-services';
+import { adminService } from '@datr.tech/leith-common-services';
 
 export const modelValidatorAdminStatusId = async (doc, next) => {
   let adminStatusId;

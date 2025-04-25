@@ -1,4 +1,4 @@
-import { entityService } from '@freight/common-api-services';
+import { entityService } from '@datr.tech/leith-common-services';
 
 export const modelValidatorFrameworkId = async (doc, next) => {
   let frameworkId;

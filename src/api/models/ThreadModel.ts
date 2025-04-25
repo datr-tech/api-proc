@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-import { threadModelSchema, threadModelSchemaOptions } from '@freight/proc-model-schemas';
+import { threadModelSchema, threadModelSchemaOptions } from '@datr.tech/parcel-model-schemas-proc';
 import {
   modelValidatorHopId,
   modelValidatorProcessId,

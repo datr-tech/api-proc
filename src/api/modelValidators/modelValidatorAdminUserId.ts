@@ -1,4 +1,4 @@
-import { personaService } from '@freight/common-api-services';
+import { personaService } from '@datr.tech/leith-common-services';
 
 export const modelValidatorAdminUserId = async (doc, next) => {
   let adminUserId;

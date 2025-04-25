@@ -1,4 +1,4 @@
-import { dolomiteService } from '@freight/common-api-services';
+import { dolomiteService } from '@datr.tech/leith-common-services';
 
 export const modelValidatorJourneyId = async (doc, next) => {
   let journeyId;

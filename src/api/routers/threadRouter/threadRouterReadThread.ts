@@ -1,7 +1,7 @@
 import { Request, Response, Router } from 'express';
 import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@freight/common-router-options';
-import { threadValidationSchemaReadThread } from '@freight/proc-router-validation-schemas';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { threadValidationSchemaReadThread } from '@datr.tech/cargo-router-validation-schemas-proc';
 import { threadController } from '@app/api/controllers/threadController';
 
 export const threadRouterReadThread = Router(options).get(

@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-import { processModelSchema, processModelSchemaOptions } from '@freight/proc-model-schemas';
+import { processModelSchema, processModelSchemaOptions } from '@datr.tech/parcel-model-schemas-proc';
 import {
   modelValidatorFrameworkId,
   modelValidatorJourneyId,
