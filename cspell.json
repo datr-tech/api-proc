@@ -14,7 +14,7 @@
     "granul8",
     "healthcheck",
     "mariadb",
-		"proc",
+    "proc",
     "tsconfg",
     "tspaths"
   ]
