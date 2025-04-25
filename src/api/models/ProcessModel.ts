@@ -1,11 +1,14 @@
-import { model, Schema } from 'mongoose';
-import { processModelSchema, processModelSchemaOptions } from '@datr.tech/parcel-model-schemas-proc';
 import {
-  modelValidatorFrameworkId,
-  modelValidatorJourneyId,
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-} from '@app/api/modelValidators';
+  modelValidatorFrameworkId,
+  modelValidatorJourneyId,
+} from '@app-ap2/api/modelValidators';
+import {
+  processModelSchema,
+  processModelSchemaOptions,
+} from '@datr.tech/parcel-model-schemas-proc';
+import { model, Schema } from 'mongoose';
 
 const processSchema = new Schema(processModelSchema, processModelSchemaOptions);
 

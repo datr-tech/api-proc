@@ -1,4 +1,4 @@
-import { ThreadModel } from '@app/api/models';
+import { ThreadModel } from '@app-ap2/api/models';
 
 export const threadControllerUpdateThread = async ({ threadId, payload }) => {
   const res = await ThreadModel.findOneAndUpdate(

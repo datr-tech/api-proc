@@ -1,5 +1,5 @@
+import { ProcessModel } from '@app-ap2/api/models';
 import { Types } from 'mongoose';
-import { ProcessModel } from '@app/api/models';
 
 export const processControllerDeleteProcess = async ({ processId }) => {
   const res = await ProcessModel.findOneAndUpdate(

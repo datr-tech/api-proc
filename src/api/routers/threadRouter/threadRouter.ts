@@ -1,5 +1,5 @@
-import { Router } from 'express';
 import { options } from '@datr.tech/leith-config-api-router-options';
+import { Router } from 'express';
 import { threadRouterCreateThread } from './threadRouterCreateThread';
 import { threadRouterDeleteThread } from './threadRouterDeleteThread';
 import { threadRouterReadThread } from './threadRouterReadThread';

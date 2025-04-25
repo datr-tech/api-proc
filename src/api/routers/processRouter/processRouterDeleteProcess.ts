@@ -1,8 +1,14 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@datr.tech/leith-config-api-router-options';
+import { processController } from '@app-ap2/api/controllers/processController';
 import { processValidationSchemaDeleteProcess } from '@datr.tech/cargo-router-validation-schemas-proc';
-import { processController } from '@app/api/controllers/processController';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const processRouterDeleteProcess = Router(options).get(
   '/',

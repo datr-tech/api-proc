@@ -1,7 +1,12 @@
+import { apiRouter } from '@app-ap2/api/routers';
+import { apiName } from '@app-ap2/config';
 import express from 'express';
-import { apiRouter } from '@app/api/routers';
+import expressHealthcheck from 'express-healthcheck';
 
-const { API_NAME } = process.env;
-const app = express().use(express.json()).use(`/${API_NAME}`, apiRouter);
+const app = express()
+  .use(express.json())
+  .use(`/${apiName}`, apiRouter)
+  .use('/healthcheck', expressHealthcheck())
+  .use('/static', express.static('public'));
 
 export { app };

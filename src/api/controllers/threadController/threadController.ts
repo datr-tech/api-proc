@@ -1,7 +1,7 @@
 import { threadControllerCreateThread } from './threadControllerCreateThread';
-import { threadControllerUpdateThread } from './threadControllerUpdateThread';
-import { threadControllerReadThread } from './threadControllerReadThread';
 import { threadControllerDeleteThread } from './threadControllerDeleteThread';
+import { threadControllerReadThread } from './threadControllerReadThread';
+import { threadControllerUpdateThread } from './threadControllerUpdateThread';
 
 export const threadController = {
   createThread: threadControllerCreateThread,

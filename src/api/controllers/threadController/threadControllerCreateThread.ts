@@ -1,7 +1,12 @@
+import { ThreadModel } from '@app-ap2/api/models';
 import { Types } from 'mongoose';
-import { ThreadModel } from '@app/api/models';
 
-export const threadControllerCreateThread = async ({ hopId, processId, adminStatusId, adminUserId }) => {
+export const threadControllerCreateThread = async ({
+  hopId,
+  processId,
+  adminStatusId,
+  adminUserId,
+}) => {
   const threadId = new Types.ObjectId();
   const modelParams = {
     threadId,

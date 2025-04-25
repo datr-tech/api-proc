@@ -1,9 +1,15 @@
-import { Request, Response, Router } from 'express';
-import { checkExact, checkSchema, matchedData, Schema, validationResult } from 'express-validator';
-import { options } from '@datr.tech/leith-config-api-router-options';
+import { processController } from '@app-ap2/api/controllers/processController';
+import { IProcessModel } from '@app-ap2/interfaces/api/models/IProcessModel';
 import { processValidationSchemaCreateProcess } from '@datr.tech/cargo-router-validation-schemas-proc';
-import { processController } from '@app/api/controllers/processController';
-import { IProcessModel } from '@app/interfaces/api/models/IProcessModel';
+import { options } from '@datr.tech/leith-config-api-router-options';
+import { Request, Response, Router } from 'express';
+import {
+  checkExact,
+  checkSchema,
+  matchedData,
+  Schema,
+  validationResult,
+} from 'express-validator';
 
 export const processRouterCreateProcess = Router(options).post(
   '/',

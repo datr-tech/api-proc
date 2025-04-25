@@ -1,7 +1,7 @@
 import { processControllerCreateProcess } from './processControllerCreateProcess';
-import { processControllerUpdateProcess } from './processControllerUpdateProcess';
-import { processControllerReadProcess } from './processControllerReadProcess';
 import { processControllerDeleteProcess } from './processControllerDeleteProcess';
+import { processControllerReadProcess } from './processControllerReadProcess';
+import { processControllerUpdateProcess } from './processControllerUpdateProcess';
 
 export const processController = {
   createProcess: processControllerCreateProcess,

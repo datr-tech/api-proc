@@ -1,7 +1,12 @@
+import { ProcessModel } from '@app-ap2/api/models';
 import { Types } from 'mongoose';
-import { ProcessModel } from '@app/api/models';
 
-export const processControllerCreateProcess = async ({ frameworkId, journeyId, adminStatusId, adminUserId }) => {
+export const processControllerCreateProcess = async ({
+  frameworkId,
+  journeyId,
+  adminStatusId,
+  adminUserId,
+}) => {
   const processId = new Types.ObjectId();
   const modelParams = {
     processId,

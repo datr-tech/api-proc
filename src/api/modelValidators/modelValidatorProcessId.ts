@@ -1,4 +1,4 @@
-import { ProcessModel } from '@app/api/models';
+import { ProcessModel } from '@app-ap2/api/models';
 
 export const modelValidatorProcessId = async (doc, next) => {
   let proc;

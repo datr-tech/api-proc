@@ -1,5 +1,5 @@
+import { ThreadModel } from '@app-ap2/api/models';
 import { Types } from 'mongoose';
-import { ThreadModel } from '@app/api/models';
 
 export const threadControllerDeleteThread = async ({ threadId }) => {
   const res = await ThreadModel.findOneAndUpdate(
