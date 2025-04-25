@@ -1,0 +1,23 @@
+include:
+  - ../db-dolomite/compose.yaml
+
+services:
+  api-dolomite:
+    build: .
+    container_name: api-dolomite
+    ports:
+      - "${API_PORT}:${API_PORT}"
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:${API_PORT}/healthcheck" ]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+      start_period: 30s
+    networks:
+      - net-dolomite
+    depends_on:
+      - db-dolomite
+
+networks:
+  net-dolomite:
+    driver: bridge

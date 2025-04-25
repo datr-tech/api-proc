@@ -55,7 +55,7 @@
   "dependencies": {
     "@datr.tech/cargo-router-validation-schemas-proc": "^0.4.0",
     "@datr.tech/leith-common-logger": "^0.4.0",
-    "@datr.tech/leith-common-mongodb-connector": "^0.4.0",
+    "@datr.tech/leith-common-mongodb-connector": "^0.4.3",
     "@datr.tech/leith-common-services": "^0.4.0",
     "@datr.tech/leith-config-api-router-options": "^0.4.0",
     "@datr.tech/parcel-model-schemas-proc": "^0.5.0",

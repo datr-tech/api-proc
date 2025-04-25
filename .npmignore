@@ -1,12 +1,18 @@
+.dockerignore
 .editorconfig
+.mailmap
 .prettierignore
 .prettierrc.json
 
 CHANGELOG.md
 commitlint.config.mjs
+compose.yaml
 cspell.json
+Dockerfile
 eslint.config.mjs
-jest.config.json
+jest.config.integration.json
+jest.config.unit.json
+README.md
 tsconfig.json
 
 .github/

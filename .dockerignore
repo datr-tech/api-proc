@@ -1,0 +1,16 @@
+CHANGELOG.md
+commitlint.config.js
+cspell.json
+eslint.config.mjs
+jest.config.integration.json
+jest.config.unit.json
+LICENSE.txt
+README.md
+tsconfig.json
+
+.git
+.github
+.husky
+
+coverage
+src
