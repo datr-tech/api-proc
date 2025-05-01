@@ -3,17 +3,23 @@ const dolomiteServiceHasHopMock = jest.fn().mockReturnValue(true);
 jest.mock('@datr.tech/leith-common-services', () => ({
   __esModule: true,
   dolomiteService: {
-    hasHop: dolomiteServiceHasHopMock,
-  },
+		hasHop: dolomiteServiceHasHopMock
+  }
 }));
 
-import { modelValidatorHopId } from '@app-p2/api/modelValidators/foreign';
+import { modelValidatorHopId } from "@app-p2/api/modelValidators/foreign";
 import { Types } from 'mongoose';
 
-describe('modelValidatorHopId', () => {
-  describe('positive', () => {
-    test('should not throw an error when the underlying dolomiteService (mocked) returns true', async () => {
-      /*
+/**
+ * modelValidatorHopId.positive
+ *
+ * A positive test for modelValidatorHopId where dolomiteService.hasHop
+ * (from '@datr.tech/leith-common-services') is mocked above, using dolomiteServiceHasHopMock.
+ */
+describe( "modelValidatorHopId", () => {
+	describe("positive", () => {
+		test("should not throw an error when the underlying dolomiteService (mocked) returns true", async () => {
+			/*
        * Arrange
        */
       const idMock = new Types.ObjectId();
@@ -23,16 +29,14 @@ describe('modelValidatorHopId', () => {
       /*
        * Act
        */
-      await modelValidatorHopId(docMock, nextMock);
+			await modelValidatorHopId(docMock, nextMock);
 
-      /*
+			/*
        * Assert
        */
-      expect(dolomiteServiceHasHopMock).toHaveBeenCalledTimes(1);
-      expect(dolomiteServiceHasHopMock).toHaveBeenCalledWith(
-        expect.objectContaining({ hopId: idMock }),
-      );
-      expect(nextMock).toHaveBeenCalledTimes(1);
-    });
-  });
-});
+		  expect( dolomiteServiceHasHopMock ).toHaveBeenCalledTimes(1);
+      expect( dolomiteServiceHasHopMock ).toHaveBeenCalledWith(expect.objectContaining({ hopId: idMock }));
+			expect(nextMock).toHaveBeenCalledTimes(1);
+		});
+	});
+}); 
