@@ -34,7 +34,7 @@ export const processControllerDeleteProcess: IProcessControllerDeleteProcess = a
      * found model by updating the value of the model's
      * 'adminStatusId' field.
      */
-    const processModel = await ProcessModel.findOneAndUpdate(
+    await ProcessModel.findOneAndUpdate(
       {
         _id: processId,
       },

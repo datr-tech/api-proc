@@ -1,13 +1,18 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
+} from '@app-ap2/api/modelValidators/foreign';
+
+import {
   modelValidatorHopId,
   modelValidatorProcessId,
-} from '@app-ap2/api/modelValidators';
+} from '@app-ap2/api/modelValidators/local';
+
 import {
   threadModelSchema,
   threadModelSchemaOptions,
 } from '@datr.tech/parcel-model-schemas-proc';
+
 import { model, Schema } from 'mongoose';
 
 const threadSchema = new Schema(threadModelSchema, threadModelSchemaOptions);

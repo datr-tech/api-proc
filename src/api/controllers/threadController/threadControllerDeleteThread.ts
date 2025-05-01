@@ -34,7 +34,7 @@ export const threadControllerDeleteThread: IThreadControllerDeleteThread = async
      * found model by updating the value of the model's
      * 'adminStatusId' field.
      */
-    const threadModel = await ThreadModel.findOneAndUpdate(
+    await ThreadModel.findOneAndUpdate(
       {
         _id: threadId,
       },
