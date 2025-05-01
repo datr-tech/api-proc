@@ -15,6 +15,8 @@ import { Types } from 'mongoose';
  *
  * A positive test for modelValidatorFrameworkId where entityService.hasFramework
  * (from '@datr.tech/leith-common-services') is mocked above, using entityServiceHasFrameworkMock.
+ *
+ * @author Datr.Tech Admin <admin@datr.tech>
  */
 describe( "modelValidatorFrameworkId", () => {
 	describe("positive", () => {

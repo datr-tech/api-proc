@@ -13,8 +13,10 @@ import { Types } from 'mongoose';
 /**
  * modelValidatorJourneyId.negative
  *
- * A positive test for modelValidatorJourneyId where dolomiteService.hasJourney
+ * A negative test for modelValidatorJourneyId where dolomiteService.hasJourney
  * (from '@datr.tech/leith-common-services') is mocked above, using dolomiteServiceHasJourneyMock.
+ *
+ * @author Datr.Tech Admin <admin@datr.tech>
  */
 describe( "modelValidatorJourneyId", () => {
 	describe("negative", () => {

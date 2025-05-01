@@ -15,6 +15,8 @@ import { Types } from 'mongoose';
  *
  * A positive test for modelValidatorHopId where dolomiteService.hasHop
  * (from '@datr.tech/leith-common-services') is mocked above, using dolomiteServiceHasHopMock.
+ *
+ * @author Datr.Tech Admin <admin@datr.tech>
  */
 describe( "modelValidatorHopId", () => {
 	describe("positive", () => {

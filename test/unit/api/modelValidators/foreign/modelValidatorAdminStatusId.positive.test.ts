@@ -15,6 +15,8 @@ import { Types } from 'mongoose';
  *
  * A positive test for modelValidatorAdminStatusId where adminService.hasStatus
  * (from '@datr.tech/leith-common-services') is mocked above, using adminServiceHasStatusMock.
+ *
+ * @author Datr.Tech Admin <admin@datr.tech>
  */
 describe( "modelValidatorAdminStatusId", () => {
 	describe("positive", () => {
