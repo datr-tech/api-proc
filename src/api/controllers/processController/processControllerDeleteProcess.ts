@@ -52,7 +52,10 @@ export const processControllerDeleteProcess: IProcessControllerDeleteProcess = a
      * "soft deleted" model.
      */
     stat.error = false;
-    stat.payload = { processId };
+    stat.payload = {
+      processId,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to
@@ -67,7 +70,10 @@ export const processControllerDeleteProcess: IProcessControllerDeleteProcess = a
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IProcessControllerDeleteProcessOutputError',

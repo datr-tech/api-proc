@@ -55,7 +55,10 @@ export const threadControllerUpdateThread: IThreadControllerUpdateThread = async
      * 'stat', to return the updated model's primary key.
      */
     stat.error = false;
-    stat.payload = { threadId };
+    stat.payload = {
+      threadId,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to 'IThreadControllerUpdateThreadOutputSuccess',
@@ -69,7 +72,10 @@ export const threadControllerUpdateThread: IThreadControllerUpdateThread = async
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IThreadControllerUpdateThreadOutputError',

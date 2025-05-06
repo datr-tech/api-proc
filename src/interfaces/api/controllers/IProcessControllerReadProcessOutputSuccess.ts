@@ -4,5 +4,6 @@ export interface IProcessControllerReadProcessOutputSuccess {
   error: false;
   payload: {
     processModel: IProcessModel;
+    responseStatusCode: number;
   };
 }

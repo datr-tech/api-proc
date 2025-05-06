@@ -4,5 +4,6 @@ export interface IThreadControllerCreateThreadOutputSuccess {
   error: false;
   payload: {
     threadId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

@@ -1,18 +1,13 @@
 import {
   modelValidatorAdminStatusId,
   modelValidatorAdminUserId,
-} from '@app-ap2/api/modelValidators/foreign';
-
-import {
   modelValidatorFrameworkId,
   modelValidatorJourneyId,
-} from '@app-ap2/api/modelValidators/local';
-
+} from '@app-ap2/api/modelValidators/foreign';
 import {
   processModelSchema,
   processModelSchemaOptions,
 } from '@datr.tech/parcel-model-schemas-proc';
-
 import { model, Schema } from 'mongoose';
 
 const processSchema = new Schema(processModelSchema, processModelSchemaOptions);

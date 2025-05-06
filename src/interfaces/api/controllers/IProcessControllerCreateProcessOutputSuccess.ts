@@ -4,5 +4,6 @@ export interface IProcessControllerCreateProcessOutputSuccess {
   error: false;
   payload: {
     processId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

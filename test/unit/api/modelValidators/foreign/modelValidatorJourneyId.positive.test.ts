@@ -3,11 +3,11 @@ const dolomiteServiceHasJourneyMock = jest.fn().mockReturnValue(true);
 jest.mock('@datr.tech/leith-common-services', () => ({
   __esModule: true,
   dolomiteService: {
-		hasJourney: dolomiteServiceHasJourneyMock
-  }
+    hasJourney: dolomiteServiceHasJourneyMock,
+  },
 }));
 
-import { modelValidatorJourneyId } from "@app-p2/api/modelValidators/foreign";
+import { modelValidatorJourneyId } from '@app-ap2/api/modelValidators/foreign';
 import { Types } from 'mongoose';
 
 /**
@@ -18,10 +18,10 @@ import { Types } from 'mongoose';
  *
  * @author Datr.Tech Admin <admin@datr.tech>
  */
-describe( "modelValidatorJourneyId", () => {
-	describe("positive", () => {
-		test("should not throw an error when the underlying dolomiteService (mocked) returns true", async () => {
-			/*
+describe('modelValidatorJourneyId', () => {
+  describe('positive', () => {
+    test('should not throw an error when the underlying dolomiteService (mocked) returns true', async () => {
+      /*
        * Arrange
        */
       const idMock = new Types.ObjectId();
@@ -31,14 +31,16 @@ describe( "modelValidatorJourneyId", () => {
       /*
        * Act
        */
-			await modelValidatorJourneyId(docMock, nextMock);
+      await modelValidatorJourneyId(docMock, nextMock);
 
-			/*
+      /*
        * Assert
        */
-		  expect( dolomiteServiceHasJourneyMock ).toHaveBeenCalledTimes(1);
-      expect( dolomiteServiceHasJourneyMock ).toHaveBeenCalledWith(expect.objectContaining({ journeyId: idMock }));
-			expect(nextMock).toHaveBeenCalledTimes(1);
-		});
-	});
-}); 
+      expect(dolomiteServiceHasJourneyMock).toHaveBeenCalledTimes(1);
+      expect(dolomiteServiceHasJourneyMock).toHaveBeenCalledWith(
+        expect.objectContaining({ journeyId: idMock }),
+      );
+      expect(nextMock).toHaveBeenCalledTimes(1);
+    });
+  });
+});

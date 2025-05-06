@@ -3,10 +3,8 @@ import {
   modelValidatorAdminUserId,
 } from '@app-ap2/api/modelValidators/foreign';
 
-import {
-  modelValidatorHopId,
-  modelValidatorProcessId,
-} from '@app-ap2/api/modelValidators/local';
+import { modelValidatorHopId } from '@app-ap2/api/modelValidators/foreign';
+import { modelValidatorProcessId } from '@app-ap2/api/modelValidators/local/modelValidatorProcessId';
 
 import {
   threadModelSchema,

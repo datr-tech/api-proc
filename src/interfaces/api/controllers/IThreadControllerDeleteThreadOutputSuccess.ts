@@ -4,5 +4,6 @@ export interface IThreadControllerDeleteThreadOutputSuccess {
   error: false;
   payload: {
     threadId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

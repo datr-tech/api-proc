@@ -4,5 +4,6 @@ export interface IProcessControllerDeleteProcessOutputSuccess {
   error: false;
   payload: {
     processId: Types.ObjectId;
+    responseStatusCode: number;
   };
 }

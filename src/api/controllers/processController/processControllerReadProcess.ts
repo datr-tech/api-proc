@@ -37,7 +37,10 @@ export const processControllerReadProcess: IProcessControllerReadProcess = async
      * 'stat', to return the found model.
      */
     stat.error = false;
-    stat.payload = { processModel };
+    stat.payload = {
+      processModel,
+      responseStatusCode: 200,
+    };
 
     /*
      * Cast the response object to
@@ -52,7 +55,10 @@ export const processControllerReadProcess: IProcessControllerReadProcess = async
      * 'stat', to return the error message.
      */
     const { message } = error;
-    stat.payload = { message };
+    stat.payload = {
+      message,
+      responseStatusCode: 404,
+    };
 
     /*
      * Cast the response object to 'IProcessControllerReadProcessOutputError',

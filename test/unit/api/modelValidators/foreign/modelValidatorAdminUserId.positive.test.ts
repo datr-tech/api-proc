@@ -3,11 +3,11 @@ const adminServiceHasUserMock = jest.fn().mockReturnValue(true);
 jest.mock('@datr.tech/leith-common-services', () => ({
   __esModule: true,
   personaService: {
-		hasUser: adminServiceHasUserMock
-  }
+    hasUser: adminServiceHasUserMock,
+  },
 }));
 
-import { modelValidatorAdminUserId } from "@app-p2/api/modelValidators/foreign";
+import { modelValidatorAdminUserId } from '@app-ap2/api/modelValidators/foreign/modelValidatorAdminUserId';
 import { Types } from 'mongoose';
 
 /**
@@ -18,10 +18,10 @@ import { Types } from 'mongoose';
  *
  * @author Datr.Tech Admin <admin@datr.tech>
  */
-describe( "modelValidatorAdminUserId", () => {
-	describe("positive", () => {
-		test("should not throw an error when the underlying adminService (mocked) returns true", async () => {
-			/*
+describe('modelValidatorAdminUserId', () => {
+  describe('positive', () => {
+    test('should not throw an error when the underlying adminService (mocked) returns true', async () => {
+      /*
        * Arrange
        */
       const idMock = new Types.ObjectId();
@@ -31,14 +31,16 @@ describe( "modelValidatorAdminUserId", () => {
       /*
        * Act
        */
-			await modelValidatorAdminUserId(docMock, nextMock);
+      await modelValidatorAdminUserId(docMock, nextMock);
 
-			/*
+      /*
        * Assert
        */
-		  expect( adminServiceHasUserMock ).toHaveBeenCalledTimes(1);
-      expect( adminServiceHasUserMock ).toHaveBeenCalledWith(expect.objectContaining({ userId: idMock }));
-			expect(nextMock).toHaveBeenCalledTimes(1);
-		});
-	});
-}); 
+      expect(adminServiceHasUserMock).toHaveBeenCalledTimes(1);
+      expect(adminServiceHasUserMock).toHaveBeenCalledWith(
+        expect.objectContaining({ userId: idMock }),
+      );
+      expect(nextMock).toHaveBeenCalledTimes(1);
+    });
+  });
+});
