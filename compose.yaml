@@ -1,10 +1,10 @@
 include:
-  - ../db-dolomite/compose.yaml
+  - ../db-proc/compose.yaml
 
 services:
-  api-dolomite:
+  api-proc:
     build: .
-    container_name: api-dolomite
+    container_name: api-proc
     ports:
       - "${API_PORT}:${API_PORT}"
     healthcheck:
@@ -12,12 +12,11 @@ services:
       interval: 10s
       timeout: 10s
       retries: 3
-      start_period: 30s
+      start_period: 50s
     networks:
-      - net-dolomite
+      - net-proc
     depends_on:
-      - db-dolomite
-
+      - db-proc
 networks:
-  net-dolomite:
+  net-proc:
     driver: bridge
